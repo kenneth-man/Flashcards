@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <!-- <link rel="shortcut icon" type="image/png" href="res/icon.png"> -->
+
+        <title>#15 &mdash; flashcards</title>
+    </head>
+
+    <body>
+        <section class="flashcards column">
+            <h1 class="h1">📝Flashcards</h1>
+
+            <div class="add__cont column round-border">
+                <form class="add__form column">
+                    <label for="ques" class="add__label">🤔 Question</label>
+                    <input type="text" name="ques" class="add__input transition round-border" placeholder="Type your question here..." id="input-q"><br><br>
+                
+                    <label for="ans" class="add__label">💡 Answer</label>
+                    <input type="text" name="ans" class="add__input transition round-border" placeholder="Type your answer here..." id="input-a"><br><br>
+                </form>
+
+                <button class="btn btn-long center transition round-border" id="btn-add">Add Flashcard</button>
+            </div>
+
+            <div class="card__cont row round-border" id="card-cont"></div>
+        </section>
+
+        <div class="popup__background center transition hidden" id="popup">
+            <div class="popup popup__error column round-border hidden">
+                <h1 class="popup__text h2">⚠️ ERROR: Missing input values received ⚠️</h1>
+
+                <button class="btn btn-short center transition round-border">Okay</button>
+            </div>
+
+            <div class="popup popup__edit column round-border hidden">
+                <form class="popup__form column">
+                    <label for="q" class="popup__label add__label">📑 Change Question</label>
+                    <input type="text" name="q" class="popup__input popup__input--q add__input transition round-border" placeholder="Type your question here..." id="popup-q"><br><br>
+                
+                    <label for="a" class="popup__label add__label">✍️ Change Answer</label>
+                    <input type="text" name="a" class="popup__input popup__input--a add__input transition round-border" placeholder="Type your answer here..." id="popup-a"><br><br>
+                </form>
+
+                <button class="btn btn-short center transition round-border">Confirm</button>
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="./script.js"></script>
+    </body>
+</html>
